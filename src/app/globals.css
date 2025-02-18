@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +27,21 @@ body {
   width: 100%;
   padding: 0 200px;
 }
+.app-content {
+  padding: 40px;
+}
 
+.nav-burger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-menu {
+  display: none;
+  list-style: none;
+  gap: 20px;
+}
 .nav-link {
   display: flex;
   border-radius: 15px;
@@ -43,7 +57,6 @@ body {
   color: white;
   background: rgba(41, 88, 150, 1) 100%;
 }
-
 
 .hello-card {
   position: relative;
@@ -92,9 +105,9 @@ body {
 
 .stat-card {
   background: linear-gradient(
-          98.1deg,
-          rgba(52, 116, 157, 1) 0%,
-          rgba(82, 192, 226, 1) 100%
+    98.1deg,
+    rgba(52, 116, 157, 1) 0%,
+    rgba(82, 192, 226, 1) 100%
   );
   align-content: center;
   position: relative;
@@ -123,7 +136,7 @@ body {
 .title-text {
   text-align: center;
   font-size: 50px;
-  color: #123D74;
+  color: #123d74;
   font-weight: bold;
 }
 
@@ -137,9 +150,9 @@ body {
 
 .work-card {
   background: linear-gradient(
-          98.1deg,
-          rgba(80, 86, 157, 1) 0%,
-          rgba(62, 162, 191, 1) 100%
+    98.1deg,
+    rgba(80, 86, 157, 1) 0%,
+    rgba(62, 162, 191, 1) 100%
   );
   position: relative;
   width: 30%;
@@ -152,14 +165,13 @@ body {
 .work-card img {
   border-radius: 30px;
   box-shadow: inset 0 20px 10px 5px rgba(0, 0, 0, 0.25),
-  10px 10px 2px -2px rgba(0, 0, 0, 0.25);
+    10px 10px 2px -2px rgba(0, 0, 0, 0.25);
   object-fit: cover;
   height: 55%;
   width: 100%;
   margin-bottom: 30px;
 }
 .work-card h3 {
-  padding: 5px;
   color: white;
   font-weight: 400;
   font-size: 18px;
@@ -168,13 +180,14 @@ body {
   display: -webkit-box; /* Включаем флексбоксы */
   -webkit-box-orient: vertical; /* Вертикальная ориентация */
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .work-card:hover {
   box-shadow: 10px 10px rgba(23, 27, 92, 1);
   background: linear-gradient(
-          20deg,
-          rgba(80, 86, 157, 1) 0%,
-          rgba(62, 162, 191, 1) 100%
+    20deg,
+    rgba(80, 86, 157, 1) 0%,
+    rgba(62, 162, 191, 1) 100%
   );
 }
 
@@ -183,7 +196,7 @@ body {
   padding: 50px;
 }
 .management * {
-  color: #123D74;
+  color: #123d74;
 }
 .management-head {
   display: flex;
@@ -195,7 +208,7 @@ body {
 }
 .management-head_img {
   border-radius: 200px;
-  border: 5px #123D74 solid;
+  border: 5px #123d74 solid;
   height: 250px;
   width: 250px;
   background-image: url("../../public/hello-card-bg.jpg");
@@ -223,9 +236,9 @@ body {
 
 .footer {
   background: linear-gradient(
-          124.67deg,
-          rgba(82, 192, 226, 1) 0%,
-          rgba(52, 116, 157, 1) 100%
+    124.67deg,
+    rgba(82, 192, 226, 1) 0%,
+    rgba(52, 116, 157, 1) 100%
   );
   border-radius: 10px;
   box-shadow: 0 7px rgba(23, 27, 92, 1);
@@ -242,7 +255,7 @@ body {
   flex: 1;
 }
 .footer_info * {
-  color: #123D74;
+  color: #123d74;
 }
 .footer_info h3 {
   font-size: 25px;
@@ -301,4 +314,344 @@ body {
 }
 .footer_creators img {
   fill: white;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .app {
+    padding: 0 100px;
+  }
+
+  .hello-card h1 {
+    font-size: 2em;
+  }
+  .hello-card h3 {
+    top: 70%;
+    font-size: 14px;
+  }
+
+  .stat-card h1 {
+    font-size: 1.7em;
+  }
+  .stat-card h3 {
+    font-size: 0.8em;
+  }
+
+  .title-text {
+    font-size: 40px;
+  }
+  .work-card-list {
+    padding: 50px 0 0 0;
+  }
+  .work-card h3 {
+    font-size: 0.8em;
+  }
+  .work-card h3 {
+    padding: 0px;
+  }
+
+  .management-head h2 {
+    text-align: center;
+  }
+  .management-info h2 {
+    font-size: 30px;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .app {
+    padding: 0 60px;
+  }
+
+  .hello-card h1 {
+    font-size: 2em;
+  }
+  .hello-card h3 {
+    top: 70%;
+    font-size: 14px;
+  }
+
+  .stat-card h1 {
+    font-size: 1.7em;
+  }
+  .stat-card h3 {
+    font-size: 0.8em;
+  }
+
+  .title-text {
+    font-size: 40px;
+  }
+  .work-card-list {
+    padding: 50px 0 0 0;
+  }
+  .work-card h3 {
+    font-size: 0.7em;
+  }
+  .work-card h3 {
+    padding: 0px;
+  }
+
+  .management-head h2 {
+    text-align: center;
+  }
+  .management-info h2 {
+    font-size: 30px;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app {
+    padding: 0 30px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .hello-card h1 {
+    font-size: 1.6em;
+    top: 50px;
+    left: 50px;
+  }
+  .hello-card h3 {
+    top: 60%;
+    left: 50px;
+    font-size: 14px;
+  }
+
+  .stat-card h1 {
+    font-size: 1.4em;
+  }
+  .stat-card h3 {
+    font-size: 0.7em;
+  }
+
+  .title-text {
+    font-size: 40px;
+  }
+  .work-card-list {
+    padding: 40px 0 0 0;
+  }
+  .work-card {
+    padding: 50px 15px;
+  }
+  .work-card h3 {
+    font-size: 0.8em;
+    padding: 0;
+  }
+
+  .management-head h3 {
+    font-size: 18px;
+  }
+  .management-head h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .management-head_img {
+    height: 200px;
+    width: 200px;
+  }
+  .management-info h2 {
+    font-size: 25px;
+  }
+
+  .footer {
+    margin-top: 0;
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 0;
+  }
+  .app-content {
+    padding: 0;
+  }
+
+  .app-content {
+    padding: 100px 0 0 0;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .nav {
+    position: fixed;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  .nav-logo {
+    z-index: 3;
+  }
+  .nav-logo img {
+    width: 120px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-burger-button {
+    z-index: 3;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .nav-burger-button span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu {
+    padding: 0 10px;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    padding-top: 150px;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #123d74;
+    transition: all 0.3s;
+  }
+  .nav-menu.active {
+    overflow: hidden;
+    left: 0;
+  }
+  .nav-link h1 {
+    margin-bottom: 25px;
+    border-bottom: 3px solid transparent;
+    transition: none;
+  }
+  .nav-link:hover h1 {
+    border-bottom: 3px solid transparent;
+  }
+  .nav-menu .nav-link {
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  .nav-burger-button.active span {
+    transform: scale(0);
+  }
+  .nav-burger-button::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .nav-burger-button.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .hello-card {
+    box-shadow: none;
+  }
+  .hello-card img {
+    height: 25vh;
+    width: 100%;
+    border-radius: 0;
+  }
+  .hello-card h1 {
+    width: 60%;
+    font-size: 0.95em;
+    top: 50px;
+    left: 30px;
+  }
+  .hello-card h3 {
+    top: 60%;
+    left: 30px;
+    font-size: 0.6em;
+    width: 50%;
+  }
+
+  .stat-card-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: none;
+    gap: 30px;
+  }
+  .stat-card {
+    width: 80%;
+  }
+  .stat-card h1 {
+    font-size: 2em;
+  }
+  .stat-card h3 {
+    font-size: 1em;
+  }
+
+  .title-text {
+    font-size: 40px;
+  }
+  .work-card-list {
+    padding: 40px 0 0 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .work-card {
+    width: 80%;
+    padding: 50px 15px;
+  }
+  .work-card h3 {
+    font-size: 0.8em;
+    padding: 0;
+  }
+
+  .management {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .management-head h3 {
+    font-size: 14px;
+  }
+  .management-head h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .management-head_img {
+    height: 200px;
+    width: 200px;
+  }
+  .management-info h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .footer {
+    margin: 0;
+    zoom: 0.8;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .footer_info {
+    gap: 5px;
+  }
+  .footer_links {
+    display: none;
+  }
+  .footer_creators {
+    zoom: 0.8;
+    gap: 0;
+  }
 }
