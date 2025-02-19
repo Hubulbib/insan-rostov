@@ -490,6 +490,8 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 1000;
+    background-color: white;
+    border-bottom: 3px solid #123d74;
   }
   .nav-logo {
     z-index: 3;

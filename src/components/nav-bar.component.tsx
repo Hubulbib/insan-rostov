@@ -28,7 +28,11 @@ const NavBarComponent = () => {
         />
       </Link>
       <button className="nav-burger-button" onClick={openBurger}>
-        {isOpen ? <X size={30} /> : <Menu size={30} />}
+        {isOpen ? (
+          <X color="white" size={30} />
+        ) : (
+          <Menu color="#123d74" size={30} />
+        )}
       </button>
       <ul className={isOpen ? `nav-menu active` : "nav-menu"}>
         <li>
