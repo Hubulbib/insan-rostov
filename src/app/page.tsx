@@ -4,6 +4,24 @@ import HelloCardComponent from "insan/components/hello-card.component";
 import StatCardComponent from "insan/components/stat-card.component";
 import WorkCardComponent from "insan/components/work-card.component";
 
+const posts = [
+  {
+    url: "https://t.me/insan_rostov161/85",
+    image: "/post1.jpeg",
+    text: "Спасибо всем ,кто принял участие в данном богоугодном деле. Пусть Всевышний примет, и приумножит. Амин !",
+  },
+  {
+    url: "https://t.me/insan_rostov161/83",
+    image: "/post2.jpeg",
+    text: "СБОР ЗАВЕРШЕН ! Выражаем слова благодарности всем,кто не остался равнодушным к семье Магомедовых. Общими усилиями было собрано 181,400 тысяча рублей,которые были переданы в руки к хозяину семьи.",
+  },
+  {
+    url: "https://t.me/insan_rostov161/80",
+    image: "/post3.png",
+    text: "Спасибо всем кто принял участие в данном Богоугодном деле. Пусть Всевышний примет, и приумножит. Амин !",
+  },
+];
+
 const Home = () => {
   return (
     <div className="app-content">
@@ -24,21 +42,14 @@ const Home = () => {
       </div>
       <h1 className="title-text">Наша работа</h1>
       <div className="work-card-list">
-        <WorkCardComponent
-          url={""}
-          image="/hello-card-bg.jpg"
-          text={
-            "Спасибо всем ,кто принял участие в данном богоугодном деле. Пусть Всевышний примет, и приумножит. Амин !"
-          }
-        />
-        <WorkCardComponent
-          url={""}
-          image="/hello-card-bg.jpg"
-          text={`СБОР ЗАВЕРШЕН!
-                    Выражаем слова благодарности всем,кто не остался равнодушным к семье Магомедовых.\n
-                    Общими усилиями было собрано 181,400 тысяча рублей,которые были Общими усилиями было собрано 181,400 тысяча рублей,которые были Общими усилиями было собрано 181,400 тысяча рублей,которые были Общими усилиями было собрано 181,400 тысяча рублей,которые были`}
-        />
-        <WorkCardComponent url={""} image="/hello-card-bg.jpg" />
+        {posts.map((el) => (
+          <WorkCardComponent
+            key={el.url}
+            url={el.url}
+            image={el.image}
+            text={el.text}
+          />
+        ))}
       </div>
       <h1 className="title-text">Руководство</h1>
       <div className="management">

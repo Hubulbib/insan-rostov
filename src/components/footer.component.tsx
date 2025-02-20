@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 
 const FooterComponent = () => {
@@ -55,7 +54,7 @@ const FooterComponent = () => {
         <a href={"https://vk.com/concept_tag"} target={"_blank"}>
           <img src={"/concept-logo.svg"} alt={"CONCEPT"} />
         </a>
-        <h2>© 2025, «БФ Инсан»</h2>
+        <h2>© 2025, «БФ ИНСАН - РОСТОВ»</h2>
       </div>
     </div>
   );
