@@ -28,19 +28,19 @@ const Home = () => {
       <HelloCardComponent />
       <div className="stat-card-list">
         <StatCardComponent
-          numberStat={"1 023 997 221"}
+          numberStat={"С 2018 года"}
+          textStat={"Помогаем людям"}
+        />
+        <StatCardComponent
+          numberStat={"26 967 266"}
           textStat={"Рублей было собрано на благотворительность"}
         />
         <StatCardComponent
-          numberStat={"203 737"}
+          numberStat={"746"}
           textStat={"Человек получили помощь"}
         />
-        <StatCardComponent
-          numberStat={"152 252"}
-          textStat={"Человек поддержали работу фонда"}
-        />
       </div>
-      <h1 className="title-text">Наша работа</h1>
+      <h1 className="title-text">Завершенные сборы</h1>
       <div className="work-card-list">
         {posts.map((el) => (
           <WorkCardComponent
@@ -54,7 +54,10 @@ const Home = () => {
       <h1 className="title-text">Руководство</h1>
       <div className="management">
         <div className="management-head">
-          <div className="management-head_img" />
+          <h1>
+            РОСТОВСКИЙ РЕГИОНАЛЬНЫЙ БЛАГОТВОРИТЕЛЬНЫЙ ФОНД "ИНСАН" (ЧЕЛОВЕК) -
+            РОСТОВ
+          </h1>
           <h3>ПРЕЗИДЕНТ</h3>
           <h2>Джаватханов Закарияв Гаджимагомедович</h2>
         </div>

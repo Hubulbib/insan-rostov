@@ -79,7 +79,7 @@ body {
   right: 0;
   color: white;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 50px;
   width: 52%;
 }
 .hello-card h3 {
@@ -206,14 +206,16 @@ body {
   align-items: center;
   flex: 1;
 }
-.management-head_img {
-  border-radius: 200px;
-  border: 5px #123d74 solid;
-  height: 250px;
-  width: 250px;
-  background-image: url("../../public/hello-card-bg.jpg");
-  background-size: cover;
-  margin-bottom: 10px;
+.management-head * {
+  text-align: center;
+}
+.management-head h1 {
+  font-size: 30px;
+  background-color: #123d74;
+  color: white;
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 20px;
 }
 .management-head h3 {
   font-size: 20px;
@@ -394,6 +396,10 @@ body {
     padding: 0px;
   }
 
+  .management-head h1 {
+    font-size: 25px;
+    padding: 20px;
+  }
   .management-head h2 {
     text-align: center;
   }
@@ -454,11 +460,12 @@ body {
     text-align: center;
     font-size: 25px;
   }
-  .management-head_img {
-    height: 200px;
-    width: 200px;
+  .management-head h1 {
+    font-size: 20px;
+    padding: 25px;
   }
   .management-info h2 {
+    text-align: center;
     font-size: 25px;
   }
 
@@ -566,6 +573,9 @@ body {
   .hello-card {
     box-shadow: none;
   }
+  .hello-card:hover {
+    box-shadow: none;
+  }
   .hello-card img {
     height: 25vh;
     width: 100%;
@@ -629,9 +639,9 @@ body {
     text-align: center;
     font-size: 20px;
   }
-  .management-head_img {
-    height: 200px;
-    width: 200px;
+  .management-head h1 {
+    font-size: 20px;
+    padding: 15px;
   }
   .management-info h2 {
     text-align: center;
