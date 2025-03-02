@@ -32,14 +32,14 @@ jobs:
       - name: Build and tag Docker images
         run: |
           docker-compose -f docker-compose.yml build
-          docker tag nextjs_app ${{ secrets.DOCKER_HUB_USERNAME }}/nextjs-app:latest
-          docker tag nginx_proxy ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-proxy:latest
+          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
+          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
 
       # Шаг 5: Пуш образов в Docker Hub (опционально)
       - name: Push Docker images
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/nextjs-app:latest
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-proxy:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
 
       # Шаг 6: Деплой (пример для сервера через SSH)
       - name: Deploy to server
