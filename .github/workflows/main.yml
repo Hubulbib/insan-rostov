@@ -50,11 +50,16 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
-            # Останавливаем и удаляем старые контейнеры
-            docker stop nextjs || true
-            docker rm -f nextjs || true
-            docker stop nginx || true
-            docker rm -f nginx || true
+            # Останавливаем и удаляем старые контейнеры (если они существуют)
+            if docker ps -a --format '{{.Names}}' | grep -q 'nextjs'; then
+              docker stop nextjs
+              docker rm -f nextjs
+            fi
+
+            if docker ps -a --format '{{.Names}}' | grep -q 'nginx'; then
+              docker stop nginx
+              docker rm -f nginx
+            fi
 
             # Запускаем новые контейнеры
             docker run -d --name nextjs -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
