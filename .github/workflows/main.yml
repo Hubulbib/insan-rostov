@@ -31,7 +31,7 @@ jobs:
       # Шаг 4: Сборка и тегирование образов
       - name: Build and tag Docker images
         run: |
-          docker-compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml build
           docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
           docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
 
