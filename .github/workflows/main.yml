@@ -50,7 +50,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
-            cd /app
-            docker-compose down
-            docker-compose pull
-            docker-compose up -d
+            # Останавливаем и удаляем старые контейнеры
+            docker stop nextjs || true
+            docker rm nextjs || true
+            docker stop nginx || true
+            docker rm nginx || true
+
+            # Запускаем новые контейнеры
+            docker run -d --name nextjs -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/nextjs-app:latest
+            docker run -d --name nginx -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-proxy:latest
