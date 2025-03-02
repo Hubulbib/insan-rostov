@@ -61,6 +61,9 @@ jobs:
               docker rm -f nginx
             fi
 
+            # Создаем сеть (если она еще не существует)
+            docker network create insan-network || true
+
             # Запускаем новые контейнеры
-            docker run -d --name nextjs -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
-            docker run -d --name nginx -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
+            docker run -d --name nextjs --network insan-network -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
+            docker run -d --name nginx --network insan-network -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
