@@ -1,5 +1,6 @@
 {
   "name": "insan-app",
+  "description": "Web-site for Insan Rostov",
   "version": "0.1.0",
   "private": true,
   "scripts": {
