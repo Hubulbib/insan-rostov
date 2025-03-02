@@ -44,5 +44,6 @@ build
 
 # Игнорируем папку с Docker-конфигурациями (если она не нужна в образе)
 docker
+docker-compose.yml
 
 nginx
