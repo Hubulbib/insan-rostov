@@ -32,8 +32,8 @@ jobs:
       - name: Build and tag Docker images
         run: |
           docker compose -f docker-compose.yml build
-          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest -f Dockerfile .
-          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest -f nginx/Dockerfile .
+          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
+          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nginx:latest
 
       # Шаг 5: Пуш образов в Docker Hub (опционально)
       - name: Push Docker images
