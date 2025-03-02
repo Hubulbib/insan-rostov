@@ -52,9 +52,9 @@ jobs:
           script: |
             # Останавливаем и удаляем старые контейнеры
             docker stop nextjs || true
-            docker rm nextjs || true
+            docker rm -f nextjs || true
             docker stop nginx || true
-            docker rm nginx || true
+            docker rm -f nginx || true
 
             # Запускаем новые контейнеры
             docker run -d --name nextjs -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
