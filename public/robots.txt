@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://insan-rostov.ru
+
+# Sitemaps
+Sitemap: https://insan-rostov.ru/sitemap.xml
