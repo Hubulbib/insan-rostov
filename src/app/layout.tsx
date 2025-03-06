@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   description: "Помогаем всем вместе",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,10 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <meta name="yandex-verification" content="a0b1c905bf8c723f" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className='app'>
+        <div className="app">
           <NavBarComponent />
           {children}
           <FooterComponent />
