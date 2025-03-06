@@ -62,7 +62,9 @@ jobs:
             fi
 
             # Создаем сеть (если она еще не существует)
-            docker network create insan-network || true
+            if [ -z "$(docker network ls --filter name=^insan-network$ --format={{.Name}})" ]; then
+              docker network create insan-network
+            fi
 
             # Запускаем новые контейнеры
             docker run -d --name nextjs --network insan-network -p 3000:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/insan-app-nextjs:latest
