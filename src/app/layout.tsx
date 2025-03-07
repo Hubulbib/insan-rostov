@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBarComponent from "insan/components/nav-bar.component";
 import FooterComponent from "insan/components/footer.component";
-
+import { Metrika } from "insan/components/yandex-metric.components";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Metrika />
         <div className="app">
           <NavBarComponent />
           {children}
