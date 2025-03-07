@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="yandex-verification" content="a0b1c905bf8c723f" />
       </head>
       <body
